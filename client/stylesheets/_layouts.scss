@@ -1,0 +1,54 @@
+.posts-list{
+  width: 80%;
+  margin: 0 auto;
+  padding: 2.5%;
+}
+.each-post{
+  margin: 1% 0;
+  height: auto;
+  padding: .5%;
+  border: 1px solid  $divider-color;
+}
+
+.single-post{
+   min-height: 50px;
+   height: auto;
+
+  .left{
+    @include span-columns(2);
+    .like{
+      float: left;
+    }
+  }
+  .center{
+    @include span-columns(8);
+    .title{
+      display: block;
+    }
+
+    .created-at{
+      display: block;
+    }
+  }
+  .right{
+    @include span-columns(2);
+    .view-comments{
+      float: right;
+    }
+  }
+
+
+}
+
+
+.view-post{
+  width: 80%;
+  margin: 0 auto;
+  padding: 2.5%;
+  .original-post{
+    border: 1px solid  $divider-color;
+  }
+  .comment-lists{
+    border: 1px solid  $divider-color;
+  }
+}

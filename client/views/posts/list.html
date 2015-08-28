@@ -1,0 +1,18 @@
+<template name="list">
+
+    <div class="posts-list">
+            {{#each posts}}
+            <div class="each-post">
+                {{> item}}
+              </div>
+            {{/each}}
+
+        {{#if nextPath}}
+            <a class="btn btn-primary btn-block load-more" href="{{nextPath}}">Load more <br><span class="glyphicon glyphicon-chevron-down"></span></a>
+        {{else}}
+            {{#unless ready}}
+                <div class="loading">{{> spinner}}</div>
+            {{/unless}}
+        {{/if}}
+    </div>
+</template>

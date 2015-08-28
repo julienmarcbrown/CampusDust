@@ -1,0 +1,17 @@
+<template name="item">
+    <div class="single-post">
+      <div class="left">
+        <button class=" {{liked}} like-post"><i class="fa fa-thumbs-up"></i> {{likeCount}}</button>
+
+      </div>
+
+      <div class="center">
+        <a class ="go-to-post title">{{title}}</a>
+        <span class="created-At">Posted {{timeAgo createdAt}}</span>
+      </div>
+
+      <div class="right">
+        <button class="go-to-post view-comments"><i class="fa fa-comment"></i> {{commentCount}}</button>
+      </div>
+    </div>
+</template>

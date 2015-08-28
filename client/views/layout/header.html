@@ -1,0 +1,27 @@
+<template name="header">
+<header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <a href="javascript:void(0)" class="logo">
+      <img src="campusdust.svg" alt="Logo Image">
+    </a>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">MENU</a>
+    <nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu show">
+        <li class="nav-link"><a href="/about">About</a></li>
+        <li class="nav-link"><a href="/privacy">Privacy Policy</a></li>
+        <li class="nav-link"><a href="/privacy">Terms of Service</a></li>
+        <li class="{{isActive 'latest'}} nav-link"><a href="/latest">Latest</a></li>
+        <li class="{{isActive 'mostliked'}} nav-link"><a href="/liked">Most liked</a></li>
+        <li class="{{isActive 'mostcommented'}} nav-link"><a href="/commented">Most commented</a></li>
+        <li class="{{isActive 'search'}} nav-link"><a href="/search">Search</a></li>
+        <li class="nav-link"><a href="/create" class="btn btn-primary navbar-btn navbar-right">New Post</a></li>
+      </ul>
+    </nav>
+
+  </div>
+</header>
+
+
+
+
+</template>

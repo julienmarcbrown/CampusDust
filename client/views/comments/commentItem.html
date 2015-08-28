@@ -1,0 +1,9 @@
+<template name="commentItem">
+    <div class="commentItem">
+<ul>
+<li class="comment-info">      <span class="createdAt">Posted {{timeAgo createdAt}}</span>      <button class="{{liked}} like-comment"> like {{likeCount}}</button>  </li>
+<li class="comment-body">        <p class="text-body">{{convertText body}}</p></li>
+</ul>
+
+    </div>
+</template>

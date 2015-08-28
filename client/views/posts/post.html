@@ -1,0 +1,31 @@
+<template name="post">
+    <div class="view-post">
+      <div class="original-post">
+        {{#with this}}
+        <ul>
+          <li class="post-info">  <span class="createdAt">Posted {{timeAgo createdAt}}</span>  <button class=" {{liked}} like-post"> {{likeCount}}</button> </li>
+          <li class="post-title">  <span class ="go-to-post title">{{title}}</span></li>
+          <li class="text-body">  <p>{{convertText body}}</p>  </li>
+        </ul>
+        {{/with}}
+      </div>
+
+        <div class="comment-list">
+            {{#if Template.subscriptionsReady}}
+
+
+                {{#each comments}}
+                <div class="each-comment">
+                    {{> commentItem}}
+                  </div>
+                {{/each}}
+                {{#if hasMoreComments}}
+                    <button class="btn btn-block get-more-comments"><span class="glyphicon glyphicon-chevron-down"></span></button>
+                {{/if}}
+            {{else}}
+                {{> spinner}}
+            {{/if}}
+            {{> commentCreate}}
+        </div>
+    </div>
+</template>
