@@ -1,9 +1,4 @@
 <template name="commentItem">
-    <div class="commentItem">
-<ul>
-<li class="comment-info">      <span class="createdAt">Posted {{timeAgo createdAt}}</span>      <button class="{{liked}} like-comment"> like {{likeCount}}</button>  </li>
-<li class="comment-body">        <p class="text-body">{{convertText body}}</p></li>
-</ul>
-
-    </div>
+  <div class="module">       <button class=" {{liked}} like-button"><i class="fa fa-thumbs-up"></i> {{likeCount}}</button>   </div>
+  <div class="module">  <p class="text-body">{{convertText body}}</p> <span class="postedAt">{{timeAgo createdAt}}</span></div>
 </template>

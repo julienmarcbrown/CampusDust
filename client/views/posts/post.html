@@ -1,19 +1,15 @@
 <template name="post">
     <div class="view-post">
-      <div class="original-post">
+      <div class="post-container">
         {{#with this}}
-        <ul>
-          <li class="post-info">  <span class="createdAt">Posted {{timeAgo createdAt}}</span>  <button class=" {{liked}} like-post"> {{likeCount}}</button> </li>
-          <li class="post-title">  <span class ="go-to-post title">{{title}}</span></li>
-          <li class="text-body">  <p>{{convertText body}}</p>  </li>
-        </ul>
+        <div class="module">  <button class=" {{liked}} like-button"><i class="fa fa-thumbs-up"></i> {{likeCount}}</button>   <span class="title">{{title}}</span> </div>
+        <div class="module">  <p>{{convertText body}}</p> <span class="postedAt">{{timeAgo createdAt}}</span>  </div>
+
         {{/with}}
       </div>
 
         <div class="comment-list">
             {{#if Template.subscriptionsReady}}
-
-
                 {{#each comments}}
                 <div class="each-comment">
                     {{> commentItem}}
